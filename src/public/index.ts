@@ -1,13 +1,22 @@
 import lg from "./companyIcons/lg.png";
-import samsung from "./companyIcons/lg.png";
-import bosch from "./companyIcons/lg.png";
-import ifb from "./companyIcons/lg.png";
-import panasonic from "./companyIcons/lg.png";
-import sharp from "./companyIcons/lg.png";
-import toshiba from "./companyIcons/lg.png";
-import siemens from "./companyIcons/lg.png";
-import hitachi from "./companyIcons/lg.png";
-import godrej from "./companyIcons/lg.png";
+import samsung from "./companyIcons/samsung.png";
+import bosch from "./companyIcons/bosch.png";
+import ifb from "./companyIcons/ifb.png";
+import panasonic from "./companyIcons/panasonic.png";
+import sharp from "./companyIcons/simen.png";
+import toshiba from "./companyIcons/toshiba.png";
+import siemens from "./companyIcons/simen.png";
+import hitachi from "./companyIcons/hitachi.png";
+import godrej from "./companyIcons/godrej.png";
+
+
+
+
+
+
+
+
+
 import rfg from "./producs/Regrigerator2.jpg";
 import wm from "./producs/washingMachine.jpg";
 import mw from "./producs/MicroWave.jpg";
@@ -18,36 +27,53 @@ import wmicon from "./productIcon/washingmachineicon.png";
 import mwicon from "./productIcon/MicroWave.png";
 import dwicon from "./productIcon/DishWasher.png";
 import dryericon from "./productIcon/Dryer.png";
-import bannerimg from "./productIcon/style.jpg"
+import bannerimg from "./productIcon/style.jpg";
 
 export { rfg, wm, mw, dryer, dw, bannerimg };
 
-export const ProductDetails = [
+export interface ProductDetailsInterface {
+  id: number;
+  name: string;
+  details: string;
+  pimage: string;
+  picon: string;
+}
+
+export const ProductDetails: ProductDetailsInterface[] = [
   {
     id: 1,
-    icon: rfgicon,
-    details:
-      "Served genuine and depandable washing machine repair. our team is behind our jobs, and we always put customer service first.",
-    name: "",
+    name: "Refrigerator",
+    pimage: rfg,
+    picon: rfgicon,
+    details: "Expert refrigerator repairs with genuine parts. Our skilled technicians ensure your fridge runs efficiently, maintaining optimal temperatures for food preservation.",
   },
   {
-    id: 1,
-    icon: mwicon,
-    details: "",
-    name: "We are one of the leading microwave oven service centers in your region, making sure that all of the microwave oven model appliances are fixed.",
-  },
-  { id: 1, icon: wmicon, details: "", name: "" },
-  {
-    id: 1,
-    icon: dwicon,
-    details: "",
-    name: "Efficient dishwasher service in mumbai. our dedicated center offers expert repairs, timely maintenance, and reliable solutions to keep your appliance running smoothly. customer satisfaction is our priority!",
+    id: 2,
+    name: "Microwave",
+    pimage: mw,
+    picon: mwicon,
+    details: "Specialized microwave oven repairs for all models. Quick diagnostics and precise fixes to restore your appliance's heating and cooking capabilities.",
   },
   {
-    id: 1,
-    icon: dryericon,
-    details: "",
-    name: "Revitalize your clothes dryer with our mumbai service center. expert repairs, quick maintenance, and customer satisfaction guaranteed. your appliance, our priority!.",
+    id: 3,
+    name: "Dishwasher",
+    pimage: dw,
+    picon: dwicon,
+    details: "Comprehensive dishwasher services in Mumbai. From leak repairs to improving cleaning performance, we ensure your dishwasher operates at peak efficiency.",
+  },
+  {
+    id: 4,
+    name: "Dryer",
+    pimage: dryer,
+    picon: dryericon,
+    details: "Expert clothes dryer repairs and maintenance. We address heating issues, strange noises, and performance problems to keep your dryer running smoothly.",
+  },
+  {
+    id: 5,
+    name: "Washing Machine",
+    pimage: wm,
+    picon: wmicon,
+    details: "Professional washing machine repairs for all brands. Our services cover everything from motor issues to cycle malfunctions, ensuring clean laundry every time.",
   },
 ];
 
@@ -55,7 +81,7 @@ export const ProductDetails = [
 interface CompanyIcon {
   id: number;
   name: string;
-  icon: string ; // The type might be different based on how you're handling images (e.g., string, any, etc.)
+  icon: string; // The type might be different based on how you're handling images (e.g., string, any, etc.)
 }
 
 // Create the array
