@@ -4,8 +4,9 @@ import Contact from "./Contact";
 import GetInTouch from "./GetInTouch";
 import LandingPage from "./LandingPage";
 import MorphDetails from "./MorphDetails";
-import Services from "./Services";
 import { useEffect } from "react";
+import ProductGrid from "./Product";
+import ServiceGrid from "./Services";
 
 export default function Home() {
   const location = useLocation();
@@ -27,7 +28,10 @@ export default function Home() {
         <LandingPage />
       </section>
       <section id="services">
-        <Services />
+        <ProductGrid />
+      </section>
+      <section id="services">
+        <ServiceGrid />
       </section>
       <section id="companies">
         <Companies />

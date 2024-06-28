@@ -1,24 +1,29 @@
 import React from "react";
 import { ProductDetails, ProductDetailsInterface } from "../../public";
+import BendoStyle from "./BendoGrid";
 
 const ProductCard: React.FC<ProductDetailsInterface> = ({
   name,
   details,
   pimage,
-  picon,
 }) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg m-4 bg-white">
-      <img className="w-full h-48 object-cover" src={pimage} height={600} width={600} alt={name} />
+    <div className="max-w-sm rounded overflow-hidden shadows p-4 bg-white">
+      <img
+        className="w-full h-auto px-4 object-cover object-center"
+        src={pimage}
+        height={1200}
+        width={1200}
+        alt={name}
+      />
       <div className="px-6 py-4">
-        <div className="flex items-center mb-2">
-          <img className="w-8 h-8 mr-2" src={picon}  alt={`${name} icon`} />
-          <div className="font-bold text-xl">{name}</div>
+        <div className="flex prose-xl prose items-center mb-2">
+          <h3>{name}</h3>
         </div>
-        <p className="text-gray-700 text-base">{details}</p>
+        <p className="text-gray-700 text-sm ">{details}</p>
       </div>
       <div className="px-6 pt-4 pb-2">
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button className="bg-indigo-500 py-3 text-white font-bold px-5 ">
           Learn More
         </button>
       </div>
@@ -28,7 +33,10 @@ const ProductCard: React.FC<ProductDetailsInterface> = ({
 
 const ProductGrid: React.FC = () => {
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 px-4">
+      <div className="py-10">
+        <BendoStyle title="Our Products" para="We have variaty of Products " />
+      </div>
       {ProductDetails.map((product) => (
         <ProductCard key={product.id} {...product} />
       ))}

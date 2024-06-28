@@ -1,24 +1,58 @@
-import Product from "./Product";
+import React from "react";
+import { ServiceDetailsInterface, Services } from "../../public";
+import BendoStyle from "./BendoGrid";
+import { Link } from "react-router-dom";
 
-const Services = () => {
+const ServiceCard: React.FC<ServiceDetailsInterface> = ({
+  id,
+  image,
+  title,
+  servicePoints,
+}) => {
   return (
-    <section>
-      <div className="flex flex-col justify-center items-center w-full">
-      <div className="flex flex-row w-full ">
-        <div className="bg-indigo-500 h-2 w-10" />
-        <div className="flex-grow">
-          <h1>Our Services</h1>
+    <div
+      key={id}
+      className="max-w-sm rounded overflow-hidden shadows p-4 bg-white"
+    >
+      <img
+        className="w-full h-auto px-4 object-cover object-center"
+        src={image}
+        height={1200}
+        width={1200}
+        alt={title}
+      />
+      <div className="px-6 py-4">
+        <div className="flex prose-xl prose items-center mb-2">
+          <h3>{title}</h3>
         </div>
-        <div className="bg-indigo-500 h-2 w-10" />
+        <p className="text-gray-700 text-sm ">{servicePoints.slice(1, 2)}</p>
       </div>
-      <h2>Provides Services Mumbai </h2>
+      <div className="px-6 pt-4 pb-2">
+        <Link
+          to={`/service/${id}`}
+          className="bg-indigo-500 py-3 text-white font-bold px-5"
+        >
+          More Info
+        </Link>
       </div>
-
-      <div>
-        <Product />
-      </div>
-    </section>
+    </div>
   );
 };
 
-export default Services;
+const ServiceGrid: React.FC = () => {
+  return (
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 px-4">
+      <div className="py-10">
+        <BendoStyle
+          title=" Our Service"
+          para="Product service and repairing "
+        />
+      </div>
+      {Services.map((service) => (
+        <ServiceCard key={service.id} {...service} />
+      ))}
+    </div>
+  );
+};
+
+export default ServiceGrid;

@@ -1,5 +1,7 @@
-import ImageDynamicBorder from "./ImageDynamicBorder";
+
 import About from "./About";
+import ImageDynamicBorder from "./ImageDynamicBorder";
+
 
 const LandingPage = () => {
   return (

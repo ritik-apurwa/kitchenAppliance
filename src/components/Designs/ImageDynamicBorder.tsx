@@ -21,7 +21,7 @@ const ImageDynamicBorder = () => {
   }, [controls]);
 
   return (
-    <section className="h-96 w-full flex items-center justify-center border-2">
+    <section className="h-96 w-full flex items-center justify-center ">
       <div className="relative flex px-1 justify-start items-start w-full">
         <motion.div
           className="border-2 border-indigo-600 overflow-hidden h-auto w-full"

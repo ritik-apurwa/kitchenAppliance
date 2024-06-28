@@ -32,7 +32,7 @@ import MicroWaveServiceImage from "./service/microwave.jpg";
 import TVServiceImage from "./service/tv.jpg";
 import LCDServiceImage from "./service/lcdservice.png";
 
-interface ServiceDetailsInterface {
+export interface ServiceDetailsInterface {
   id: number;
   title: string;
   image: string;

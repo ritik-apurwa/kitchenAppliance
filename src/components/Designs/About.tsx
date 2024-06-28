@@ -1,16 +1,11 @@
-const About = () => {
+import BendoStyle from "./BendoGrid";
+
+
+export default function About  () {
   return (
     <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-row items-center justify-center gap-y-8">
-        <div className="h-2 bg-indigo-600 w-full max-w-20 mx-auto"></div>
-        <h1 className="text-3xl sm:text-4xl font-semibold text-center text-gray-900 dark:text-gray-100">
-          About Us
-        </h1>
-        <div className="h-2 bg-indigo-600 w-full max-w-20 mx-auto"></div>
-      </div>
-      <div className="prose-lg">
-        <h3 className="text-center font-bold">25 years exeperience</h3>
-      </div>
+     <BendoStyle title="About us" para="25 years exeperience" />
+     
 
       <div className="mt-8 prose prose-lg text-gray-700 dark:text-gray-300">
         <p>
@@ -29,5 +24,3 @@ const About = () => {
     </section>
   );
 };
-
-export default About;
