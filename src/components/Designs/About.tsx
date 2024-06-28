@@ -19,21 +19,6 @@ const About = () => {
           out-of-warranty products such as refrigerators, microwaves, air
           conditioners, and washing machines in Mumbai.
         </p>
-
-        <p>
-          Our expert technicians specialize in repairing major household
-          appliances like washing machines, ovens, refrigerators, and freezers.
-          They assess potential damages, repair defects, and provide advice to
-          prevent future issues. We ensure quality repairs and provide
-          transparent maintenance terms and costs.
-        </p>
-
-        <p>
-          Service Centre Mumbai prioritizes customer service excellence. Our
-          technicians are trained professionals available nationwide, ensuring
-          fast booking and diagnosis either via phone or online. We aim to
-          provide efficient service with genuine replacement parts.
-        </p>
       </div>
 
       <div className="mt-8 flex justify-center">

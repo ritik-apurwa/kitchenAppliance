@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { useScroll, useMotionValueEvent, motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { FaHome } from "react-icons/fa"; // Example icon from react-icons
+import { useScroll, useMotionValueEvent } from "framer-motion";
+import { Link } from "react-router-dom"; // Adjust the import path as necessary
+
+import DynamicBorderDiv from "./DynamicBorder";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Navbar = () => {
   const { scrollY } = useScroll();
@@ -27,21 +29,19 @@ const Navbar = () => {
           About
         </Link>
       </div>
-      <div className="relative flex items-center justify-center">
-        <FaHome className="text-gray-600" size={30} />
-        <div
-          className="absolute inset-0 rounded-full border-4 border-white"
-          style={{
-            boxSizing: "border-box",
-          }}
-        ></div>
-        <motion.div
-          className="absolute inset-0 rounded-full border-4 border-blue-500"
-          style={{
-            boxSizing: "border-box",
-            clipPath: `inset(${100 - scrollPercentage}% 0 0 0)`,
-          }}
-        ></motion.div>
+      <div>
+        
+      </div>
+      <div className="relative flex size-8  items-center justify-center">
+        <DynamicBorderDiv
+          progress={scrollPercentage}
+          circleRadius={45}
+          strokeWidth={20}
+          contentBg="bg-blue-500"
+          circleColor="text-gray-200"
+          progressColor="text-blue-500"
+         content={<FaWhatsapp />}
+        />
       </div>
     </section>
   );

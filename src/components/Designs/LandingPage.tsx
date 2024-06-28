@@ -3,9 +3,13 @@ import About from "./About";
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen max-w-7xl mx-auto grid grid-rows-2 lg:grid-cols-2 items-center">
-      <ImageDynamicBorder />
-      <About />
+    <div className="grid grid-rows-2 lg:grid-cols-2 container ">
+      <div className="flex items-center justify-center size-full border">
+        <ImageDynamicBorder />
+      </div>
+      <div className="flex justify-center items-center">
+        <About />
+      </div>
     </div>
   );
 };
