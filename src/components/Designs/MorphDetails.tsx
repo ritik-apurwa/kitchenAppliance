@@ -1,4 +1,5 @@
-import { bannerimg } from "@/public";
+import { bannerimg } from "../../public";
+
 
 
 const MorphDetails = () => {
