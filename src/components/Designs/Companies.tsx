@@ -16,7 +16,10 @@ const Companies = () => {
   return (
     <section className="py-16 h-96 bg-gradient-to-r from-blue-50 to-indigo-50">
       <div className="container mx-auto px-4">
-       <BendoStyle title="Why Choose Us" para="We have products from from top companies"/>
+        <BendoStyle
+          title="Why Choose Us"
+          para="We have products from from top companies"
+        />
 
         <div className="overflow-hidden cursor-pointer" ref={emblaRef}>
           <div className="flex flex-row">

@@ -17,24 +17,15 @@ const ServiceDetail: React.FC = () => {
   return (
     <MotionDiv initial="hidden" animate="visible" variants={variants}>
       <div className="max-w-4xl mx-auto p-8">
-        <div className="flex items-center mb-4">
-          <Link
-            to="/"
-            className="border-2  px-3 flex flex-row items-center"
-          >
-            <FiArrowLeft className="mr-2" />
-            Back
-          </Link>
-        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="overflow-hidden rounded-lg shadow-lg">
+          <div className="overflow-hidden rounded-lg ">
             <img
               src={service.image}
               alt={service.title}
               className="w-full h-auto object-cover"
             />
           </div>
-          <div>
+          <div className="flex flex-col items-center justify-center">
             <h2 className="text-3xl font-bold mb-4">{service.title}</h2>
             <ul className="list-disc list-inside">
               {service.servicePoints.map((point, index) => (
@@ -43,6 +34,16 @@ const ServiceDetail: React.FC = () => {
                 </li>
               ))}
             </ul>
+            <div className="flex items-center justify-center w-1/2 mb-4">
+              <Link
+                to="/#services"
+                className="border-2 w-full py-3  justify-center  flex flex-row items-center"
+              >
+               
+                <FiArrowLeft className="mr-2" />
+                <span>Back</span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

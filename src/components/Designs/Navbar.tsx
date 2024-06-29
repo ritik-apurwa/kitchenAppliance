@@ -1,12 +1,10 @@
-import { Group } from "lucide-react";
-import { FaMedkit } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar: React.FC<{ currentSection: string }> = ({ currentSection }) => {
   return (
-    <header className="w-full flex-row h-16 flex justify-between items-center max-w-7xl py-2 lg:py-4 mx-auto">
+    <header className="w-full flex-row h-16 px-3 flex justify-between items-center max-w-7xl py-2 lg:py-4 mx-auto">
       <div className="px-2 items-center flex">
         <Link to="/" className="font-bold text-xl">
           Team Hope
@@ -26,9 +24,13 @@ const Navbar: React.FC<{ currentSection: string }> = ({ currentSection }) => {
           </motion.span>
         </AnimatePresence>
       </div>
-      <div className="flex flex-row gap-x-2 items-center px-3">
-        <Group />
-        <FaMedkit />
+      <div className="hidden lg:flex flex-row gap-x-2 items-center px-3">
+        <button className="px-4 py-2 bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 rounded-lg">
+          Login
+        </button>
+        <button className="px-4 py-2 bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 rounded-lg">
+          Register
+        </button>
       </div>
     </header>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import { ServiceDetailsInterface, Services } from "../../public";
 import BendoStyle from "./BendoGrid";
 import { Link } from "react-router-dom";
+import AnimatedSection from "./AnimatedSection";
 
 const ServiceCard: React.FC<ServiceDetailsInterface> = ({
   id,
@@ -50,7 +51,9 @@ const ServiceGrid: React.FC = () => {
       </div>
       <div className="grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 px-4">
         {Services.map((service) => (
-          <ServiceCard key={service.id} {...service} />
+        <AnimatedSection key={service.id.toString()} id={service.id.toString()}>
+            <ServiceCard key={service.id} {...service} />
+        </AnimatedSection>
         ))}
       </div>
     </div>

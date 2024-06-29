@@ -34,7 +34,7 @@ const GetInTouch: React.FC = () => {
           <h1 className="text-3xl font-bold text-gray-800 my-6 ">Services</h1>
           <div className="grid grid-cols-2     md:grid-cols-3 xl:grid-cols-4 lg:py-10 gap-4">
             {ProductDetails.map((item) => (
-              <div className="flex flex-row border-2  py-1 px-2 items-center gap-x-2">
+              <div key={item.id} className="flex flex-row border-2  py-1 px-2 items-center gap-x-2">
                 <div className="w-12 h-auto">
                   <img src={item.picon} alt="" />
                 </div>

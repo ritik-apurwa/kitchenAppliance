@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import React from "react";
 
 interface DynamicBorderDivProps {
   progress: number;
@@ -26,18 +27,19 @@ export default function DynamicBorderDiv({
 }: DynamicBorderDivProps) {
   const circumference = 2 * Math.PI * circleRadius;
   const strokeDashoffset = circumference - (progress / 100) * circumference;
-  const aspectRatio = 1; // Square aspect ratio
 
   return (
     <section className="flex justify-center items-center" style={{ padding }}>
       <div
-        className={`${active ? "relative " : "w-full relative text-wrap"}`}
-        style={{ paddingBottom: `${aspectRatio * 100}%` }}
+        className={`${active ? "relative" : "w-full relative text-wrap"}`}
+        style={{ paddingBottom: "100%" }}
       >
-        <div className="absolute -z-10 top-0 left-0 w-full h-full flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center">
           <svg
             className="transform rotate-[-90deg] w-full h-full"
-            viewBox={`0 0 ${100 * aspectRatio} 100`}
+            viewBox={`0 0 ${circleRadius * 2 + strokeWidth} ${
+              circleRadius * 2 + strokeWidth
+            }`}
             preserveAspectRatio="xMidYMid meet"
           >
             <circle
@@ -65,11 +67,12 @@ export default function DynamicBorderDiv({
               transition={{ duration: 0.5 }}
             />
           </svg>
-
           <div
-            className={`absolute size-[90%] text-xs rounded-full flex justify-center items-center ${contentBg}`}
+            className={`absolute   border-red-300 rounded-full size-[90%] flex justify-center items-center ${contentBg}`}
           >
-            {content}
+           <div className="size-[90%] flex items-center justify-center">
+           {content}
+           </div>
           </div>
         </div>
       </div>

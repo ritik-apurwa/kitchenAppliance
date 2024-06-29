@@ -20,17 +20,17 @@ export default function IconBorderProgress() {
     setScrollPercentage(scrollPercent);
   });
   return (
-    <Link to="https://wa.me/+916376358708" className=" relative ">
+    <Link to="https://wa.me/+916376358708" className="  relative ">
       <DynamicBorderDiv
-          progress={scrollPercentage}
-          circleRadius={45}
-          strokeWidth={12}
-          padding={2} // Add padding here
-          contentBg="bg-green-500"
-          circleColor="text-gray-200"
-          progressColor="text-red-500"
-          content={<FaWhatsapp className="text-gray-600" size={30} />}
-        />
+        progress={scrollPercentage}
+        circleRadius={45}
+        strokeWidth={6}
+        padding={2} // Add padding here
+        contentBg=" bg-green-500"
+        circleColor="text-gray-200"
+        progressColor="text-red-500"
+        content={<FaWhatsapp className="text-gray-600" size={30} />}
+      />
     </Link>
   );
 }
