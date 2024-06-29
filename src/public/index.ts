@@ -8,7 +8,7 @@ import toshiba from "./companyIcons/toshiba.png";
 import siemens from "./companyIcons/simen.png";
 import hitachi from "./companyIcons/hitachi.png";
 import godrej from "./companyIcons/godrej.png";
-import combo from "./other/combo.png"
+import combo from "./other/combo.jpg"
 import rfg from "./producs/Regrigerator2.jpg";
 import wm from "./producs/washingMachine.jpg";
 import mw from "./producs/MicroWave.jpg";

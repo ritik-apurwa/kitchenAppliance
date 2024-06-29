@@ -1,11 +1,9 @@
 import BendoStyle from "./BendoGrid";
 
-
-export default function About  () {
+export default function About() {
   return (
     <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-     <BendoStyle title="About us" para="25 years exeperience" />
-     
+      <BendoStyle title="About us" para="25 years exeperience" />
 
       <div className="mt-8 prose prose-lg text-gray-700 dark:text-gray-300">
         <p>
@@ -23,4 +21,4 @@ export default function About  () {
       </div>
     </section>
   );
-};
+}

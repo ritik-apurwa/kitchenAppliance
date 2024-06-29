@@ -7,7 +7,8 @@ import ServiceDetail from "./components/Designs/ServiceDetails";
 
 export default function App() {
   return (
-    <Routes>
+   <section className="">
+     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
@@ -15,5 +16,6 @@ export default function App() {
         <Route path="user/:userId" element={<UserProfile />} />
       </Route>
     </Routes>
+   </section>
   );
 }

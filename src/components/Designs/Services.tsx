@@ -41,16 +41,18 @@ const ServiceCard: React.FC<ServiceDetailsInterface> = ({
 
 const ServiceGrid: React.FC = () => {
   return (
-    <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 px-4">
+    <div className="w-full max-w-7xl mx-auto">
       <div className="py-10">
         <BendoStyle
           title=" Our Service"
           para="Product service and repairing "
         />
       </div>
-      {Services.map((service) => (
-        <ServiceCard key={service.id} {...service} />
-      ))}
+      <div className="grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 px-4">
+        {Services.map((service) => (
+          <ServiceCard key={service.id} {...service} />
+        ))}
+      </div>
     </div>
   );
 };

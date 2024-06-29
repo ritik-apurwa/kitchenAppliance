@@ -5,11 +5,11 @@ import ImageDynamicBorder from "./ImageDynamicBorder";
 
 const LandingPage = () => {
   return (
-    <div className="grid grid-rows-2 lg:grid-cols-2 container ">
-      <div className="flex items-center justify-center size-full border">
+    <div className="flex  flex-col max-w-7xl mx-auto lg:flex-row py-6   ">
+      <div className="lg:w-7/12 ">
         <ImageDynamicBorder />
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex lg:w-5/12 justify-center items-center">
         <About />
       </div>
     </div>

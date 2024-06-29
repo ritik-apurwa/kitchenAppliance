@@ -33,13 +33,15 @@ const ProductCard: React.FC<ProductDetailsInterface> = ({
 
 const ProductGrid: React.FC = () => {
   return (
-    <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 px-4">
+    <div className=" w-full max-w-7xl mx-auto">
       <div className="py-10">
         <BendoStyle title="Our Products" para="We have variaty of Products " />
       </div>
-      {ProductDetails.map((product) => (
-        <ProductCard key={product.id} {...product} />
-      ))}
+      <div className="grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 px-4">
+        {ProductDetails.map((product) => (
+          <ProductCard key={product.id} {...product} />
+        ))}
+      </div>
     </div>
   );
 };

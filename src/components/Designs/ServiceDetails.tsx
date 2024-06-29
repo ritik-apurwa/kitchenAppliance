@@ -20,7 +20,7 @@ const ServiceDetail: React.FC = () => {
         <div className="flex items-center mb-4">
           <Link
             to="/"
-            className="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out"
+            className="border-2  px-3 flex flex-row items-center"
           >
             <FiArrowLeft className="mr-2" />
             Back

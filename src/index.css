@@ -89,9 +89,7 @@
     animation: scroll 600ms linear infinite;
   }
 
-  .container {
-    @apply h-[calc(100vh-10px)] w-screen mx-auto min-h-fit  ;
-  }
+ 
 
   .shadows {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
