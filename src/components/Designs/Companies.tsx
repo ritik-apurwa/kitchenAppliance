@@ -26,14 +26,14 @@ const Companies = () => {
             {companyIcons.concat(companyIcons).map((item, index) => (
               <div
                 key={`${item.id}-${index}`}
-                className="flex flex-col items-center flex-shrink-0 mx-6"
+                className="flex cursor-pointer flex-col pointer-events-none items-center flex-shrink-0 mx-6"
               >
                 <img
                   src={item.icon}
-                  className="w-20 h-20 object-contain"
+                  className="w-20 h-20 cursor-pointer pointer-events-none object-contain"
                   alt={item.name}
                 />
-                <p className="mt-2 text-lg font-bold text-gray-600">
+                <p className="mt-2 text-lg cursor-pointer pointer-events-none font-bold text-gray-600">
                   {item.name}
                 </p>
               </div>
