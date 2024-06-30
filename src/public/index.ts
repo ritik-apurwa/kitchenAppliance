@@ -8,12 +8,13 @@ import toshiba from "./companyIcons/toshiba.png";
 import siemens from "./companyIcons/simen.png";
 import hitachi from "./companyIcons/hitachi.png";
 import godrej from "./companyIcons/godrej.png";
-import combo from "./other/combo.jpg"
+import combo from "./other/combo.jpg";
 import rfg from "./producs/Regrigerator2.jpg";
 import wm from "./producs/washingMachine.jpg";
 import mw from "./producs/MicroWave.jpg";
 import dw from "./producs/Dishwasher.jpg";
 import dryer from "./producs/Dryer.jpg";
+
 import rfgicon from "./productIcon/refrigeratorIcon.png";
 import wmicon from "./productIcon/washingmachineicon.png";
 import mwicon from "./productIcon/MicroWave.png";
@@ -21,6 +22,7 @@ import dwicon from "./productIcon/DishWasher.png";
 import dryericon from "./productIcon/Dryer.png";
 import tvIcon from "./producs/tvicons.jpg";
 import lcdicons from "./producs/lcd.webp";
+
 import bannerimg from "./productIcon/style.jpg";
 import tv from "./producs/tv.jpg";
 import lcd from "./producs/lcd.png";
@@ -179,4 +181,234 @@ export const companyIcons: CompanyIcon[] = [
   { id: 8, name: "Siemens", icon: siemens },
   { id: 9, name: "Hitachi", icon: hitachi },
   { id: 10, name: "Godrej", icon: godrej },
+];
+
+interface BrandServiceDetails {
+  Refrigerator: string;
+  WashingMachine: string;
+  MicrowaveOven: string;
+  AirConditioner: string;
+  Television: string;
+  [key: string]: string; // For any additional services that might be added
+}
+
+export interface Brand {
+  id: number;
+  brandName: string;
+  brandBgImage: string;
+  brandServices: { name: string; icon: string }[];
+  brandServiceDetails: BrandServiceDetails;
+  brandServicePara: string;
+}
+export const brands: Brand[] = [
+  {
+    id: 1,
+    brandName: "LG",
+    brandBgImage: lg,
+    brandServices: [
+      { name: "Refrigerator", icon: "path/to/refrigerator-icon.png" },
+      { name: "Washing Machine", icon: "path/to/washing-machine-icon.png" },
+      { name: "Microwave Oven", icon: "path/to/microwave-oven-icon.png" },
+      { name: "Air Conditioner", icon: "path/to/air-conditioner-icon.png" },
+      { name: "Television", icon: "path/to/television-icon.png" },
+    ],
+    brandServiceDetails: {
+      Refrigerator: "Refrigerator repair and maintenance services",
+      WashingMachine: "Washing machine repair and maintenance services",
+      MicrowaveOven: "Microwave oven repair and maintenance services",
+      AirConditioner: "Air conditioner repair and maintenance services",
+      Television: "Television repair and maintenance services",
+    },
+    brandServicePara:
+      "At LG, we provide excellent services for all your LG products. Our expert technicians ensure timely and efficient repairs, maintenance, and support.",
+  },
+  {
+    id: 2,
+    brandName: "Samsung",
+    brandBgImage:samsung,
+    brandServices: [
+      { name: "Refrigerator", icon: "path/to/refrigerator-icon.png" },
+      { name: "Washing Machine", icon: "path/to/washing-machine-icon.png" },
+      { name: "Microwave Oven", icon: "path/to/microwave-oven-icon.png" },
+      { name: "Air Conditioner", icon: "path/to/air-conditioner-icon.png" },
+      { name: "Television", icon: "path/to/television-icon.png" },
+    ],
+    brandServiceDetails: {
+      Refrigerator: "Refrigerator repair and maintenance services",
+      WashingMachine: "Washing machine repair and maintenance services",
+      MicrowaveOven: "Microwave oven repair and maintenance services",
+      AirConditioner: "Air conditioner repair and maintenance services",
+      Television: "Television repair and maintenance services",
+    },
+    brandServicePara:
+      "At Samsung, we provide excellent services for all your Samsung products. Our expert technicians ensure timely and efficient repairs, maintenance, and support.",
+  },
+  {
+    id: 3,
+    brandName: "Bosch",
+    brandBgImage: bosch,
+    brandServices: [
+      { name: "Refrigerator", icon: "path/to/refrigerator-icon.png" },
+      { name: "Washing Machine", icon: "path/to/washing-machine-icon.png" },
+      { name: "Microwave Oven", icon: "path/to/microwave-oven-icon.png" },
+      { name: "Air Conditioner", icon: "path/to/air-conditioner-icon.png" },
+      { name: "Television", icon: "path/to/television-icon.png" },
+    ],
+    brandServiceDetails: {
+      Refrigerator: "Refrigerator repair and maintenance services",
+      WashingMachine: "Washing machine repair and maintenance services",
+      MicrowaveOven: "Microwave oven repair and maintenance services",
+      AirConditioner: "Air conditioner repair and maintenance services",
+      Television: "Television repair and maintenance services",
+    },
+    brandServicePara:
+      "At Bosch, we provide excellent services for all your Bosch products. Our expert technicians ensure timely and efficient repairs, maintenance, and support.",
+  },
+  {
+    id: 4,
+    brandName: "IFB",
+    brandBgImage: ifb,
+    brandServices: [
+      { name: "Refrigerator", icon: "path/to/refrigerator-icon.png" },
+      { name: "Washing Machine", icon: "path/to/washing-machine-icon.png" },
+      { name: "Microwave Oven", icon: "path/to/microwave-oven-icon.png" },
+      { name: "Air Conditioner", icon: "path/to/air-conditioner-icon.png" },
+      { name: "Television", icon: "path/to/television-icon.png" },
+    ],
+    brandServiceDetails: {
+      Refrigerator: "Refrigerator repair and maintenance services",
+      WashingMachine: "Washing machine repair and maintenance services",
+      MicrowaveOven: "Microwave oven repair and maintenance services",
+      AirConditioner: "Air conditioner repair and maintenance services",
+      Television: "Television repair and maintenance services",
+    },
+    brandServicePara:
+      "At IFB, we provide excellent services for all your IFB products. Our expert technicians ensure timely and efficient repairs, maintenance, and support.",
+  },
+  {
+    id: 5,
+    brandName: "Panasonic",
+    brandBgImage: panasonic,
+    brandServices: [
+      { name: "Refrigerator", icon: "path/to/refrigerator-icon.png" },
+      { name: "Washing Machine", icon: "path/to/washing-machine-icon.png" },
+      { name: "Microwave Oven", icon: "path/to/microwave-oven-icon.png" },
+      { name: "Air Conditioner", icon: "path/to/air-conditioner-icon.png" },
+      { name: "Television", icon: "path/to/television-icon.png" },
+    ],
+    brandServiceDetails: {
+      Refrigerator: "Refrigerator repair and maintenance services",
+      WashingMachine: "Washing machine repair and maintenance services",
+      MicrowaveOven: "Microwave oven repair and maintenance services",
+      AirConditioner: "Air conditioner repair and maintenance services",
+      Television: "Television repair and maintenance services",
+    },
+    brandServicePara:
+      "At Panasonic, we provide excellent services for all your Panasonic products. Our expert technicians ensure timely and efficient repairs, maintenance, and support.",
+  },
+  {
+    id: 6,
+    brandName: "Sharp",
+    brandBgImage: sharp,
+    brandServices: [
+      { name: "Refrigerator", icon: "path/to/refrigerator-icon.png" },
+      { name: "Washing Machine", icon: "path/to/washing-machine-icon.png" },
+      { name: "Microwave Oven", icon: "path/to/microwave-oven-icon.png" },
+      { name: "Air Conditioner", icon: "path/to/air-conditioner-icon.png" },
+      { name: "Television", icon: "path/to/television-icon.png" },
+    ],
+    brandServiceDetails: {
+      Refrigerator: "Refrigerator repair and maintenance services",
+      WashingMachine: "Washing machine repair and maintenance services",
+      MicrowaveOven: "Microwave oven repair and maintenance services",
+      AirConditioner: "Air conditioner repair and maintenance services",
+      Television: "Television repair and maintenance services",
+    },
+    brandServicePara:
+      "At Sharp, we provide excellent services for all your Sharp products. Our expert technicians ensure timely and efficient repairs, maintenance, and support.",
+  },
+  {
+    id: 7,
+    brandName: "Toshiba",
+    brandBgImage: toshiba,
+    brandServices: [
+      { name: "Refrigerator", icon: "path/to/refrigerator-icon.png" },
+      { name: "Washing Machine", icon: "path/to/washing-machine-icon.png" },
+      { name: "Microwave Oven", icon: "path/to/microwave-oven-icon.png" },
+      { name: "Air Conditioner", icon: "path/to/air-conditioner-icon.png" },
+      { name: "Television", icon: "path/to/television-icon.png" },
+    ],
+    brandServiceDetails: {
+      Refrigerator: "Refrigerator repair and maintenance services",
+      WashingMachine: "Washing machine repair and maintenance services",
+      MicrowaveOven: "Microwave oven repair and maintenance services",
+      AirConditioner: "Air conditioner repair and maintenance services",
+      Television: "Television repair and maintenance services",
+    },
+    brandServicePara:
+      "At Toshiba, we provide excellent services for all your Toshiba products. Our expert technicians ensure timely and efficient repairs, maintenance, and support.",
+  },
+  {
+    id: 8,
+    brandName: "Siemens",
+    brandBgImage: siemens,
+    brandServices: [
+      { name: "Refrigerator", icon: "path/to/refrigerator-icon.png" },
+      { name: "Washing Machine", icon: "path/to/washing-machine-icon.png" },
+      { name: "Microwave Oven", icon: "path/to/microwave-oven-icon.png" },
+      { name: "Air Conditioner", icon: "path/to/air-conditioner-icon.png" },
+      { name: "Television", icon: "path/to/television-icon.png" },
+    ],
+    brandServiceDetails: {
+      Refrigerator: "Refrigerator repair and maintenance services",
+      WashingMachine: "Washing machine repair and maintenance services",
+      MicrowaveOven: "Microwave oven repair and maintenance services",
+      AirConditioner: "Air conditioner repair and maintenance services",
+      Television: "Television repair and maintenance services",
+    },
+    brandServicePara:
+      "At Siemens, we provide excellent services for all your Siemens products. Our expert technicians ensure timely and efficient repairs, maintenance, and support.",
+  },
+  {
+    id: 9,
+    brandName: "Hitachi",
+    brandBgImage: hitachi,
+    brandServices: [
+      { name: "Refrigerator", icon: "path/to/refrigerator-icon.png" },
+      { name: "Washing Machine", icon: "path/to/washing-machine-icon.png" },
+      { name: "Microwave Oven", icon: "path/to/microwave-oven-icon.png" },
+      { name: "Air Conditioner", icon: "path/to/air-conditioner-icon.png" },
+      { name: "Television", icon: "path/to/television-icon.png" },
+    ],
+    brandServiceDetails: {
+      Refrigerator: "Refrigerator repair and maintenance services",
+      WashingMachine: "Washing machine repair and maintenance services",
+      MicrowaveOven: "Microwave oven repair and maintenance services",
+      AirConditioner: "Air conditioner repair and maintenance services",
+      Television: "Television repair and maintenance services",
+    },
+    brandServicePara:
+      "At Hitachi, we provide excellent services for all your Hitachi products. Our expert technicians ensure timely and efficient repairs, maintenance, and support.",
+  },
+  {
+    id: 10,
+    brandName: "Godrej",
+    brandBgImage: godrej,
+    brandServices: [
+      { name: "Refrigerator", icon: "path/to/refrigerator-icon.png" },
+      { name: "Washing Machine", icon: "path/to/washing-machine-icon.png" },
+      { name: "Microwave Oven", icon: "path/to/microwave-oven-icon.png" },
+      { name: "Air Conditioner", icon: "path/to/air-conditioner-icon.png" },
+      { name: "Television", icon: "path/to/television-icon.png" },
+    ],
+    brandServiceDetails: {
+      Refrigerator: "Refrigerator repair and maintenance services",
+      WashingMachine: "Washing machine repair and maintenance services",
+      MicrowaveOven: "Microwave oven repair and maintenance services",
+      AirConditioner: "Air conditioner repair and maintenance services",
+      Television: "Television repair and maintenance services",
+    },
+    brandServicePara:
+      "At Godrej, we provide excellent services for all your Godrej products. Our expert technicians ensure timely and efficient repairs, maintenance, and support.",
+  },
 ];

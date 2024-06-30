@@ -9,6 +9,8 @@ const ProductCard: React.FC<ProductDetailsInterface> = ({ name, details, pimage 
       <div id="image_div" className="flex-1 flex items-center justify-center p-4">
         <img
           className="w-full h-auto object-contain"
+          height={800}
+          width={800}
           src={pimage}
           alt={name}
         />

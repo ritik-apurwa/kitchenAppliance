@@ -25,22 +25,24 @@ const Navbar: React.FC = () => {
       initial="closed"
       animate={isOpen ? "open" : "closed"}
       variants={menuVariants}
-      className=" max-w-7xl mx-auto overflow-hidden"
+      className="  w-screen bg-white mx-auto overflow-hidden"
     >
-      <div className="flex justify-between max-h-14 w-full items-center p-4">
-        <Link to="/" className="font-bold text-xl">
-          Team Hope
-        </Link>
-        <button
-          onClick={handleOpen}
-          className=" p-1.5 bg-indigo-600 text-white rounded-full focus:outline-none"
-        >
-          {isOpen ? <X /> : <MenuIcon />}
-        </button>
-      </div>
+      <div className="max-w-7xl mx-auto">
+        <div className="flex justify-between max-h-14 w-full items-center p-4">
+          <Link to="/" className="font-bold text-xl">
+            Team Hope
+          </Link>
+          <button
+            onClick={handleOpen}
+            className=" p-1.5 bg-indigo-600 text-white rounded-full focus:outline-none"
+          >
+            {isOpen ? <X /> : <MenuIcon />}
+          </button>
+        </div>
 
-      <div className="h-auto w-full py-10 flex justify-center items-center">
-        <MobileNav isOpen={isOpen} toggleNav={toggleNav} />
+        <div className="h-auto  py-10 flex bg-white max-w-5xl mx-auto overflow-y-auto max-h-screen  justify-center items-center">
+          <MobileNav isOpen={isOpen} toggleNav={toggleNav} />
+        </div>
       </div>
     </motion.header>
   );

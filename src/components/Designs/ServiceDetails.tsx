@@ -2,7 +2,6 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { Services } from "../../public";
-// Custom MotionDiv component for animations
 import { FiArrowLeft } from "react-icons/fi"; // Example: using Feather Icons
 import MotionDiv from "./MotionDiv";
 

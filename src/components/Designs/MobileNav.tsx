@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Services } from "../../public";
+import { brands } from "../../public";
 
 interface NavProps {
   isOpen: boolean;
@@ -11,9 +12,17 @@ interface NavProps {
 
 export const MobileNav: React.FC<NavProps> = ({ toggleNav }) => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isBrandsOpen, setIsBrandsOpen] = useState(false);
   const location = useLocation();
 
-  const toggleServices = () => setIsServicesOpen(!isServicesOpen);
+  const toggleServices = () => {
+    setIsServicesOpen(!isServicesOpen);
+    setIsBrandsOpen(false);
+  };
+  const toggleBrands = () => {
+    setIsServicesOpen(false);
+    setIsBrandsOpen(!isBrandsOpen);
+  };
 
   const menuVariants = {
     closed: { opacity: 0, height: 0 },
@@ -41,6 +50,44 @@ export const MobileNav: React.FC<NavProps> = ({ toggleNav }) => {
     );
   };
 
+  const BrandLinks = () => {
+    return (
+      <div
+        className={` space-y-4 ${
+          isBrandsOpen || isServicesOpen ? "pb-10 lg:pb-20" : ""
+        }`}
+      >
+        <button
+          className={`flex items-center justify-between w-full text-lg font-medium text-gray-800 `}
+          onClick={toggleBrands}
+        >
+          Brands
+          {isBrandsOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+        </button>
+        <AnimatePresence>
+          {isBrandsOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="space-y-2"
+            >
+              {brands.map((item) => (
+                <Link
+                  to={`/brands/${item.id}`}
+                  key={item.id}
+                  className="block text-lg text-gray-600 hover:text-blue-600 transition-colors"
+                  onClick={toggleNav}
+                >
+                  {item.brandName}
+                </Link>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    );
+  };
   const ServiceLinkss = () => {
     return (
       <div className="space-y-4">
@@ -83,7 +130,7 @@ export const MobileNav: React.FC<NavProps> = ({ toggleNav }) => {
   ];
 
   return (
-    <section className="w-10/12 ">
+    <section className="w-10/12  ">
       <AnimatePresence>
         <motion.div
           variants={menuVariants}
@@ -95,6 +142,7 @@ export const MobileNav: React.FC<NavProps> = ({ toggleNav }) => {
           <nav className="space-y-6 text-2xl font-medium">
             <MenuLinkss />
             <ServiceLinkss />
+            <BrandLinks />
           </nav>
         </motion.div>
       </AnimatePresence>
