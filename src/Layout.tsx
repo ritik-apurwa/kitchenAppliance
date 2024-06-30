@@ -26,7 +26,7 @@ const Layout = () => {
     "contact",
     "get-in-touch",
   ];
-  const [currentSection, setCurrentSection] = useState<string>("Home");
+  const [, setCurrentSection] = useState<string>("Home");
   const location = useLocation();
 
   useEffect(() => {
@@ -64,16 +64,18 @@ const Layout = () => {
   return (
     <main className="relative   overflow-x-hidden overflow-y-auto">
       <div className="">
-        <div className="fixed top-0 h-16 bg-background z-50 border-2 border-black w-screen">
-          <Navbar currentSection={currentSection} />
+        <div className="fixed top-0 h-16 bg-background z-50  w-screen">
+          <Navbar />
         </div>
-        <Outlet />
-      </div>
-      <div>
-        <Footer />
-      </div>
-      <div className="fixed bottom-10 size-14 right-4">
-        <IconBorderProgress />
+        <div className="min-h-[calc(100vh-135px)]">
+          <Outlet />
+        </div>
+        <div>
+          <Footer />
+        </div>
+        <div className="fixed bottom-10 size-14 right-4">
+          <IconBorderProgress />
+        </div>
       </div>
     </main>
   );
