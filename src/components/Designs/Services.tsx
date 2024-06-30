@@ -18,8 +18,9 @@ const ServiceCard: React.FC<ServiceDetailsInterface> = ({
       <img
         className="w-full h-auto px-4 object-cover object-center"
         src={image}
-        height={1200}
-        width={1200}
+        height={800}
+        width={800}
+        loading="lazy"
         alt={title}
       />
       <div className="px-6 py-4">

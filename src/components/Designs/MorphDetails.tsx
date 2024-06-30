@@ -6,6 +6,7 @@ export default function MorphDetails() {
       <div className="home relative py-10">
         <img
           src={bannerimg}
+          loading="lazy"
           className="w-full h-auto object-cover"
           alt="banner"
         />

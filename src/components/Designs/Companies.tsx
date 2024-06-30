@@ -30,6 +30,7 @@ const Companies = () => {
               >
                 <img
                   src={item.icon}
+                  loading="lazy"
                   className="w-20 h-20 cursor-pointer pointer-events-none object-contain"
                   alt={item.name}
                 />

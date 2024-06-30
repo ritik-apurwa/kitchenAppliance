@@ -11,7 +11,7 @@ import AnimatedSection from "./AnimatedSection";
 const Home: React.FC = () => {
   return (
     <section className="flex flex-col">
-      <section className="flex flex-col w-screen  gap-y-4">
+      <section className="flex flex-col w-screen">
         <AnimatedSection key="morph-details" id="morph-details">
           <MorphDetails />
         </AnimatedSection>

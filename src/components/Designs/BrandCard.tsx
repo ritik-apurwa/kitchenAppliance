@@ -41,6 +41,9 @@ const BrandCard = ({
         <div className="relative  h-[50vh]  flex flex-col justify-center items-center  text-white">
           <img
             src={brandBgImage}
+            height={600}
+            width={600}
+            loading="lazy"
             alt={`${brandName} logo`}
             className="h-auto w-60 mb-4"
           />
@@ -115,6 +118,7 @@ const BrandCard = ({
               <img
                 src={service.picon}
                 alt={service.name}
+                loading="lazy"
                 className="w-32 h-32 object-cover mb-2"
               />
               <span className="font-bold text-lg">{service.name}</span>

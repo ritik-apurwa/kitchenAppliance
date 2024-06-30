@@ -31,6 +31,7 @@ const ImageDynamicBorder = () => {
             <img
               src={combo}
               height={500}
+              loading="lazy"
               className="h-auto w-full bg-cover object-cover object-center"
               width={500}
               alt=""
