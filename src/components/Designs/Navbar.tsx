@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
       initial="closed"
       animate={isOpen ? "open" : "closed"}
       variants={menuVariants}
-      className="bg-white shadow-md  overflow-hidden"
+      className=" max-w-7xl mx-auto overflow-hidden"
     >
       <div className="flex justify-between max-h-14 w-full items-center p-4">
         <Link to="/" className="font-bold text-xl">
