@@ -1,5 +1,5 @@
 import React from "react";
-import Companies from "./Companies";
+
 import Contact from "./Contact";
 import GetInTouch from "./GetInTouch";
 import LandingPage from "./LandingPage";
@@ -28,9 +28,8 @@ const Home: React.FC = () => {
         <section id="services" className="w-screen">
           <ServiceGrid />
         </section>
-        <AnimatedSection id="companies" key="companies">
-          <Companies />
-        </AnimatedSection>
+       
+       
         <AnimatedSection id="contact" key="contact">
           <Contact />
         </AnimatedSection>

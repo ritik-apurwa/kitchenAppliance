@@ -18,7 +18,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/product" element={<ProductGrid />} />
           <Route path="/service/:id" element={<ServiceDetail />} />
-          <Route path="/brands/:id" element={<BrandPage />} />
+          <Route path="/:brandName" element={<BrandPage />} />
         </Route>
       </Routes>
     </section>

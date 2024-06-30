@@ -53,19 +53,27 @@ export const MobileNav: React.FC<NavProps> = ({ isOpen, toggleNav }) => {
             exit="closed"
             className="space-y-6 text-2xl font-medium"
           >
-          <div className="flex flex-col gap-y-4 text-lg">
-          <MenuItem path="/contact" label="Contact" />
-            <MenuItem path="/about" label="About" />
-            <MenuItem path="/product" label="Product" />
-          </div>
+            <div className="flex flex-col gap-y-4 text-lg">
+              <MenuItem path="/contact" label="Contact" />
+              <MenuItem path="/about" label="About" />
+              <MenuItem path="/product" label="Product" />
+            </div>
 
-            <div className={`space-y-4 ${isBrandsOpen || isServicesOpen ? "pb-10 lg:pb-20" : ""}`}>
+            <div
+              className={`space-y-4 ${
+                isBrandsOpen || isServicesOpen ? "pb-10 lg:pb-20" : ""
+              }`}
+            >
               <button
                 className="flex items-center justify-between w-full text-lg font-medium text-gray-800"
                 onClick={toggleBrands}
               >
                 Brands
-                {isBrandsOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+                {isBrandsOpen ? (
+                  <ChevronUp size={24} />
+                ) : (
+                  <ChevronDown size={24} />
+                )}
               </button>
               <AnimatePresence>
                 {isBrandsOpen && (
@@ -76,15 +84,15 @@ export const MobileNav: React.FC<NavProps> = ({ isOpen, toggleNav }) => {
                     transition={{ duration: 0.3 }}
                     className="space-y-2"
                   >
-                   <div className="flex flex-col gap-4 text-lg">
-                   {brands.map((item) => (
-                      <MenuItem
-                        key={item.id}
-                        path={`/brands/${item.id}`}
-                        label={item.brandName}
-                      />
-                    ))}
-                   </div>
+                    <div className="flex flex-col gap-4 text-lg">
+                      {brands.map((item) => (
+                        <MenuItem
+                          key={item.id}
+                          path={`/${item.brandName.toLowerCase()}`}
+                          label={item.brandName}
+                        />
+                      ))}
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -96,7 +104,11 @@ export const MobileNav: React.FC<NavProps> = ({ isOpen, toggleNav }) => {
                 onClick={toggleServices}
               >
                 Services
-                {isServicesOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+                {isServicesOpen ? (
+                  <ChevronUp size={24} />
+                ) : (
+                  <ChevronDown size={24} />
+                )}
               </button>
               <AnimatePresence>
                 {isServicesOpen && (
@@ -107,15 +119,15 @@ export const MobileNav: React.FC<NavProps> = ({ isOpen, toggleNav }) => {
                     transition={{ duration: 0.3 }}
                     className="space-y-2"
                   >
-                   <div className="flex flex-col gap-4 text-lg">
-                   {Services.map((item) => (
-                      <MenuItem
-                        key={item.id}
-                        path={`/service/${item.id}`}
-                        label={item.title}
-                      />
-                    ))}
-                   </div>
+                    <div className="flex flex-col gap-4 text-lg">
+                      {Services.map((item) => (
+                        <MenuItem
+                          key={item.id}
+                          path={`/service/${item.id}`}
+                          label={item.title}
+                        />
+                      ))}
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>
